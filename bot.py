@@ -11,7 +11,7 @@ from commands.help import macoin_help
 from commands.site import site
 from commands.graph import graph
 from commands.video import video
-
+from commands.launch import launch
 # get bot api token from .env
 load_dotenv('.env')
 BOTAPI = getenv('BOTAPITOKEN')
@@ -41,6 +41,9 @@ site_macoin_handler = CommandHandler('site', site)
 graph_macoin_handler = CommandHandler('graph', graph)
 video_macoin_handler = CommandHandler('video', video)
 
+launch_macoin_handler = CommandHandler('launch', launch)
+
+
 # add handlers to dispatcher
 dispatcher.add_handler(start_handler)
 dispatcher.add_handler(help_handler)
@@ -51,6 +54,7 @@ dispatcher.add_handler(price_handler)
 dispatcher.add_handler(site_macoin_handler)
 dispatcher.add_handler(graph_macoin_handler)
 dispatcher.add_handler(video_macoin_handler)
+dispatcher.add_handler(launch_macoin_handler)
 
 # start bot
 updater.start_polling()
