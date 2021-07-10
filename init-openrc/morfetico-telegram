@@ -1,0 +1,30 @@
+#!/sbin/openrc-run
+#      Este script foi escrito para a seguinte distro:       #
+#       * Gentoo Linux * Funtoo Linux *                      #
+##############################################################
+depend() {
+need netif.eth0
+	}
+
+start(){
+##################### PARTE 1 #####################
+ebegin "Iniciando o Telegram bot macoin"
+
+su - morfetico -c "nohup bash /home/morfetico/morfetico-telegram/start.sh &> /home/morfetico/morfetico-telegram/start.log &"
+echo
+
+}
+
+stop(){
+ebegin "Parando o Telegram bot macoin"
+killall -9 -u morfetico
+echo
+
+}
+
+restart (){
+stop
+sleep 1
+start
+}
+# Fim do script
