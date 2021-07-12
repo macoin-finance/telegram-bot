@@ -15,6 +15,8 @@ from commands.video import video
 from commands.news import news
 from commands.discord import discord 
 from commands.store import store
+from commands.instagram import instagram
+from commands.twitter import twitter
 
 # get bot api token from .env
 load_dotenv('.env')
@@ -47,6 +49,8 @@ video_macoin_handler = CommandHandler('video', video)
 news_macoin_handler = CommandHandler('news', news)
 discord_macoin_handler = CommandHandler('discord', discord)
 store_macoin_handler = CommandHandler('store', store)
+instagram_macoin_handler = CommandHandler('instagram', instagram)
+twitter_macoin_handler = CommandHandler('twitter', twitter)
 
 # add handlers to dispatcher
 dispatcher.add_handler(start_handler)
@@ -61,6 +65,8 @@ dispatcher.add_handler(video_macoin_handler)
 dispatcher.add_handler(news_macoin_handler)
 dispatcher.add_handler(discord_macoin_handler)
 dispatcher.add_handler(store_macoin_handler)
+dispatcher.add_handler(instagram_macoin_handler)
+dispatcher.add_handler(twitter_macoin_handler)
 
 # start bot
 updater.start_polling()
