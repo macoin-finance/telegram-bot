@@ -13,6 +13,8 @@ from commands.site import site
 from commands.graph import graph
 from commands.video import video
 from commands.news import news
+from commands.discord import discord 
+
 
 # get bot api token from .env
 load_dotenv('.env')
@@ -43,6 +45,8 @@ site_macoin_handler = CommandHandler('site', site)
 graph_macoin_handler = CommandHandler('graph', graph)
 video_macoin_handler = CommandHandler('video', video)
 news_macoin_handler = CommandHandler('news', news)
+discord_macoin_handler = CommandHandler('discord', discord)
+
 
 # add handlers to dispatcher
 dispatcher.add_handler(start_handler)
@@ -55,6 +59,8 @@ dispatcher.add_handler(site_macoin_handler)
 dispatcher.add_handler(graph_macoin_handler)
 dispatcher.add_handler(video_macoin_handler)
 dispatcher.add_handler(news_macoin_handler)
+dispatcher.add_handler(discord_macoin_handler)
+
 
 # start bot
 updater.start_polling()
