@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 from os import getenv
 import logging
+import datetime
 from telegram.ext import Updater, CommandHandler
 
 from commands.contract import contract
@@ -11,6 +12,7 @@ from commands.help import macoin_help
 from commands.site import site
 from commands.graph import graph
 from commands.video import video
+from commands.news import news
 
 # get bot api token from .env
 load_dotenv('.env')
@@ -40,6 +42,7 @@ tut_trust_handler = CommandHandler('trust', trust)
 site_macoin_handler = CommandHandler('site', site)
 graph_macoin_handler = CommandHandler('graph', graph)
 video_macoin_handler = CommandHandler('video', video)
+news_macoin_handler = CommandHandler('news', news)
 
 # add handlers to dispatcher
 dispatcher.add_handler(start_handler)
@@ -51,6 +54,7 @@ dispatcher.add_handler(price_handler)
 dispatcher.add_handler(site_macoin_handler)
 dispatcher.add_handler(graph_macoin_handler)
 dispatcher.add_handler(video_macoin_handler)
+dispatcher.add_handler(news_macoin_handler)
 
 # start bot
 updater.start_polling()
