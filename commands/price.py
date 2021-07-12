@@ -11,7 +11,7 @@ try:
     macoin = pancakeswap.get('data')
     timestamp = pancakeswap.get('updated_at')
     humantime = datetime.fromtimestamp(int(timestamp/1000))
-    usd_brl = requests.get('https://economia.awesomeapi.com.br/all/USD').json()['USD']['high']
+    usd_brl = requests.get('https://api.binance.com/api/v3/ticker/price?symbol=USDTBRL').json()['price']
     macoin_usd = pancakeswap.get('data', {}).get('price')
     macoin_bnb = pancakeswap.get('data', {}).get('price_BNB')
 
@@ -30,7 +30,7 @@ except requests.exceptions.RequestException as e:
         orgbnb = requests.get('https://bsc.api.0x.org/swap/v1/price?sellToken=0x20F23bC6F28bd31f9869b9C7750fDEaFED7d22Cd&buyToken=BNB&sellAmount=1').json()
         macoin_usd = org.get('price')
         macoin_bnb = orgbnb.get('price')
-        usd_brl = requests.get('https://economia.awesomeapi.com.br/all/USD').json()['USD']['high']
+        usd_brl = requests.get('https://api.binance.com/api/v3/ticker/price?symbol=USDTBRL').json()['price']
 
         valuebrl = float(usd_brl)
         valueusd = float(macoin_usd)
