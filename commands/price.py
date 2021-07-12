@@ -6,7 +6,7 @@ from datetime import datetime
 MACOIN = requests.get('https://api.pancakeswap.info/api/v2/tokens/0x20F23bC6F28bd31f9869b9C7750fDEaFED7d22Cd').json()["data"]
 TIMESTAMP = requests.get('https://api.pancakeswap.info/api/v2/tokens/0x20F23bC6F28bd31f9869b9C7750fDEaFED7d22Cd').json()['updated_at']
 
-HUMANTIME = datetime.fromtimestamp(TIMESTAMP/1000)
+HUMANTIME = datetime.fromtimestamp(int(TIMESTAMP/1000))
 
 MESSAGE_TEXT = f"**MaCoin price USD:** ${MACOIN['price']}\n**MaCoin price BNB:** ${MACOIN['price_BNB']}\n\nPreço atualizado em: {HUMANTIME}"
 
