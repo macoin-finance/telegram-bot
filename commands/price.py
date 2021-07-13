@@ -7,7 +7,7 @@ def get_api_data(url):
     try:
         response = requests.get(url)
         result = response.json()
-    except equests.exceptions.RequestException:
+    except requests.exceptions.RequestException:
         result = {}
     return result
 
