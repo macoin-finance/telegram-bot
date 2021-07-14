@@ -7,7 +7,7 @@ def get_api_data(url):
     try:
         response = requests.get(url)
         result = response.json()
-    except equests.exceptions.RequestException:
+    except requests.exceptions.RequestException:
         result = {}
     return result
 
@@ -30,9 +30,9 @@ if pancakeswap:
         message_text = '**MaCoin price USD:** ${}\n'.format(macoin_usd)
         message_text += '**MaCoin price BNB:** ${}\n'.format(macoin_bnb)
         message_text += '**MaCoin price BRL:** R${}\n\n'.format(macoin_brl)
-        message_text += 'Preço atualizado em: {}'.format(humantime)
+        message_text += 'Update at: {}'.format(humantime)
     else:
-        message_text = 'api.pancakeswap.info fora do ar. Tente novamente em alguns minutos'
+        message_text = 'api.pancakeswap.info down. Try again in a few minutes.'
 else:
     usd = get_api_data('https://bsc.api.0x.org/swap/v1/price?sellToken=0x20F23bC6F28bd31f9869b9C7750fDEaFED7d22Cd&buyToken=BUSD&sellAmount=1')
     bnb = get_api_data('https://bsc.api.0x.org/swap/v1/price?sellToken=0x20F23bC6F28bd31f9869b9C7750fDEaFED7d22Cd&buyToken=BNB&sellAmount=1')
@@ -44,9 +44,9 @@ else:
             value_usd = float(macoin_usd)
             macoin_brl = round(value_brl * value_usd, 20)
         else:
-            message_text = 'bsc.api.0x.org fora do ar. Tente novamente em alguns minutos'
+            message_text = 'bsc.api.0x.org down. Try again in a few minutes.'
     else:
-        message_text = '**API da Pancakeswap.info e bsc.api.0x.org fora do ar. Tente novamente em alguns minutos.'
+        message_text = 'Pancakeswap.info and bsc.api.0x.org API down. Try again in a few minutes.'
     message_text = '**MaCoin price USD:** ${}\n'.format(macoin_usd)
     message_text += '**MaCoin price BNB:** ${}\n'.format(macoin_bnb)
     message_text += '**MaCoin price BRL:** R${}'.format(macoin_brl)
