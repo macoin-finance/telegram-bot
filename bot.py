@@ -10,6 +10,7 @@ from commands.tutorial_trustwallet import trust
 from commands.price import price
 from commands.help import macoin_help
 from commands.site import site
+from commands.tokenomics import tokenomics
 from commands.graph import graph
 from commands.video import video
 from commands.news import news
@@ -44,6 +45,7 @@ price_handler = CommandHandler('price', price)
 tut_metamask_handler = CommandHandler('metamask', metamask)
 tut_trust_handler = CommandHandler('trust', trust)
 site_macoin_handler = CommandHandler('site', site)
+tokenomics_macoin_handler = CommandHandler('tokenomics', tokenomics)
 graph_macoin_handler = CommandHandler('graph', graph)
 video_macoin_handler = CommandHandler('video', video)
 news_macoin_handler = CommandHandler('news', news)
@@ -60,6 +62,7 @@ dispatcher.add_handler(tut_metamask_handler)
 dispatcher.add_handler(tut_trust_handler)
 dispatcher.add_handler(price_handler)
 dispatcher.add_handler(site_macoin_handler)
+dispatcher.add_handler(tokenomics_macoin_handler)
 dispatcher.add_handler(graph_macoin_handler)
 dispatcher.add_handler(video_macoin_handler)
 dispatcher.add_handler(news_macoin_handler)
