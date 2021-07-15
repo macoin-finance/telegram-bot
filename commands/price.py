@@ -15,10 +15,15 @@ def get_api_data(url):
         result = {}
     return result
 
-usd_brl_api = get_api_data('https://api.binance.com/api/v3/ticker/price?symbol=USDTBRL')
-if 'price' in usd_brl_api:
-    usd_brl = usd_brl_api['price']
+def price(update, context):
+    context.bot.send_message(chat_id=update.effective_chat.id, text=message_text, parse_mode='markdown')
 
+
+usd_brl_api = get_api_data('https://api.binance.com/api/v3/ticker/price?symbol=USDTBRL')
+if 'price' not in usd_brl_api:
+    message_text = 'binance API down. Try again in a few minutes.'
+else:
+    usd_brl = usd_brl_api['price']
 
     pancakeswap = get_api_data('https://api.pancakeswap.info/api/v2/tokens/0x20F23bC6F28bd31f9869b9C7750fDEaFED7d22Cd')
     if pancakeswap:
@@ -56,6 +61,3 @@ if 'price' in usd_brl_api:
                 message_text = 'bsc.api.0x.org down. Try again in a few minutes.'
         else:
             message_text = 'Pancakeswap.info and bsc.api.0x.org API down. Try again in a few minutes.'
-    
-    def price(update, context):
-        context.bot.send_message(chat_id=update.effective_chat.id, text=message_text, parse_mode='markdown')
