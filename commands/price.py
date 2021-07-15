@@ -5,7 +5,7 @@ from datetime import datetime
 def get_api_data(url):
 
     try:
-        response = requests.get(url)
+        response = requests.get(url, timeout=5)
         result = response.json()
     except requests.exceptions.RequestException:
         result = {}
