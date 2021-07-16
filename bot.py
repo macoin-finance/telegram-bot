@@ -5,8 +5,8 @@ import datetime
 from telegram.ext import Updater, CommandHandler
 
 from commands.contract import contract
-from commands.tutorial_metamask import metamask 
-from commands.tutorial_trustwallet import trust 
+from commands.tutorial_metamask import metamask
+from commands.tutorial_trustwallet import trust
 from commands.price import price
 from commands.help import macoin_help
 from commands.site import site
@@ -14,10 +14,12 @@ from commands.tokenomics import tokenomics
 from commands.graph import graph
 from commands.video import video
 from commands.news import news
-from commands.discord import discord 
+from commands.discord import discord
 from commands.store import store
 from commands.instagram import instagram
 from commands.twitter import twitter
+from commands.about import about
+from commands.buy import buy
 
 # get bot api token from .env
 load_dotenv('.env')
@@ -53,6 +55,8 @@ discord_macoin_handler = CommandHandler('discord', discord)
 store_macoin_handler = CommandHandler('store', store)
 instagram_macoin_handler = CommandHandler('instagram', instagram)
 twitter_macoin_handler = CommandHandler('twitter', twitter)
+about_macoin_handler = CommandHandler('about', about)
+buy_macoin_handler = CommandHandler('buy', buy)
 
 # add handlers to dispatcher
 dispatcher.add_handler(start_handler)
@@ -70,6 +74,8 @@ dispatcher.add_handler(discord_macoin_handler)
 dispatcher.add_handler(store_macoin_handler)
 dispatcher.add_handler(instagram_macoin_handler)
 dispatcher.add_handler(twitter_macoin_handler)
+dispatcher.add_handler(about_macoin_handler)
+dispatcher.add_handler(buy_macoin_handler)
 
 # start bot
 updater.start_polling()

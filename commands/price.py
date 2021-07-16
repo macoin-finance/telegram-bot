@@ -41,7 +41,7 @@ else:
             message_text = '**MaCoin price USD:** ${}\n'.format(macoin_usd)
             message_text += '**MaCoin price BNB:** ${}\n'.format(macoin_bnb)
             message_text += '**MaCoin price BRL:** R${}\n\n'.format(macoin_brl)
-            message_text += 'Update at: {}'.format(humantime)
+            message_text += 'Updated at: {}'.format(humantime)
         else:
             message_text = 'api.pancakeswap.info down. Try again in a few minutes.'
     else:

@@ -36,6 +36,17 @@ def get_coins_burned():
     result = ''
   return result
 
+def get_transfers():
+  try:
+    response = requests.get("https://bscscan.com/token/0x20f23bc6f28bd31f9869b9c7750fdeafed7d22cd")
+    soup = BeautifulSoup(response.content, 'html.parser')
+    transfers = soup.select("#d-md-flex justify-content-between mb-4")
+    result = transfers[0].text
+    result = result.replace('\n', '')
+  except:
+    result = ''
+  return result
+
 message_text = "MaCoin contract: 0x20F23bC6F28bd31f9869b9C7750fDEaFED7d22Cd\n\nBSC scan: https://bscscan.com/token/0x20F23bC6F28bd31f9869b9C7750fDEaFED7d22Cd\n\n"
 message_text += "MaCoin holders: {}".format(get_holders())
 message_text += "\nCoins available to buy: {}".format(get_coins_available_to_buy())
