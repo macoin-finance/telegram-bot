@@ -20,6 +20,7 @@ from commands.instagram import instagram
 from commands.twitter import twitter
 from commands.about import about
 from commands.buy import buy
+from commands.clubhouse import clubhouse
 
 # get bot api token from .env
 load_dotenv('.env')
@@ -57,6 +58,7 @@ instagram_macoin_handler = CommandHandler('instagram', instagram)
 twitter_macoin_handler = CommandHandler('twitter', twitter)
 about_macoin_handler = CommandHandler('about', about)
 buy_macoin_handler = CommandHandler('buy', buy)
+clubhouse_macoin_handler = CommandHandler('clubhouse', clubhouse)
 
 # add handlers to dispatcher
 dispatcher.add_handler(start_handler)
@@ -76,6 +78,7 @@ dispatcher.add_handler(instagram_macoin_handler)
 dispatcher.add_handler(twitter_macoin_handler)
 dispatcher.add_handler(about_macoin_handler)
 dispatcher.add_handler(buy_macoin_handler)
+dispatcher.add_handler(clubhouse_macoin_handler)
 
 # start bot
 updater.start_polling()
