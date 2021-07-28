@@ -36,6 +36,8 @@ bash -x start.sh
 ESSA CONTA DEVE SER DOADA PARA A COMUNIDADE
 RECOMENDO QUE TODO O PROJETO MACOIN SEJA SEMPRE LICENÇA BSD-3 CLAUSE, PELA LIBERDADE DE TODOS
 
+OBS: desliguei o 2FA da minha conta, e botei a senha padrão que enviei a todos os outros founders, quem quiser tocar agora em diante é seu, é da COMUNIDADE! é BSD!!!!!
+
 by coffnix (GNU é o caralho, dá man init e ve se tem GNU)
 
 
