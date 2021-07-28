@@ -30,4 +30,13 @@ pip install -r requirements.txt
 ```bash
 bash -x start.sh
 ```
-by coffnix
+
+
+### msg do pet marley :D
+ESSA CONTA DEVE SER DOADA PARA A COMUNIDADE
+RECOMENDO QUE TODO O PROJETO MACOIN SEJA SEMPRE LICENÇA BSD-3 CLAUSE, PELA LIBERDADE DE TODOS
+
+by coffnix (GNU é o caralho, dá man init e ve se tem GNU)
+
+
+
