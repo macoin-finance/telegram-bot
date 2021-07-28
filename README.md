@@ -38,7 +38,18 @@ RECOMENDO QUE TODO O PROJETO MACOIN SEJA SEMPRE LICENÇA BSD-3 CLAUSE, PELA LIBE
 
 OBS: desliguei o 2FA da minha conta, e botei a senha padrão que enviei a todos os outros founders, quem quiser tocar agora em diante é seu, é da COMUNIDADE! é BSD!!!!!
 
+Querem saber a real história da MACOIN, o bitcoin da maconha medicinal???? Acesse e pergunte lá: https://t.me/h2hconference
+
 by coffnix (GNU é o caralho, dá man init e ve se tem GNU)
+
+
+who is John Galt?
+who is Satoshi Nakamoto?
+who is Marley van Saberhagen?
+
+everyone except Craig Wright
+
+HAHAHHA
 
 
 
