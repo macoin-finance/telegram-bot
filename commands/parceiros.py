@@ -1,4 +1,4 @@
-MESSAGE_TEXT='**Carteira de MACOIN da Associação Reconstruir Cannabis:**\t0xE14EA0C3FCF43b0f8423c23840Cf34F26F8d0cBe\n\nSite:\thttps://reconstruir.org.br\n\nInstagram:\thttps://instagram.com/reconstruircannabis'
+MESSAGE_TEXT='**Carteira de MACOIN da Associação Reconstruir Cannabis:**\t0xE14EA0C3FCF43b0f8423c23840Cf34F26F8d0cBe\n\nSite:\thttps://reconstruir.org.br\n\nInstagram:\thttps://instagram.com/reconstruircannabis\n\n\n#################################\n\nCarteira de MACOIN do Dr. Emílio Figueiredo 0xe034335EDD9966d4d0d27f99075B10308e664e49\n\nAdvogado do GROWROOM de 2009 a 2016 e atual advogado da COMUNIDADE MACOIN, o Bitcoin da maconha medicinal\nTrabalha a anos pela defesa criminal para usuários, cultivadores e pacientes, Habeas Corpus preventivo para cultivo de cannabis e consultoria para pessoas jurídicas (empresas e associações) que querem empreender com cannabis\n\nTelefone: +5521-991253403'
 
 def parceiros(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=MESSAGE_TEXT , parse_mode='markdown', disable_web_page_preview='True')
