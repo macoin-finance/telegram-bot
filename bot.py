@@ -21,6 +21,10 @@ from commands.twitter import twitter
 from commands.about import about
 from commands.buy import buy
 from commands.clubhouse import clubhouse
+from commands.paper import paper
+from commands.parceiros import parceiros
+from commands.doe import doe
+from commands.hemp import hemp
 
 # get bot api token from .env
 load_dotenv('.env')
@@ -59,6 +63,10 @@ twitter_macoin_handler = CommandHandler('twitter', twitter)
 about_macoin_handler = CommandHandler('about', about)
 buy_macoin_handler = CommandHandler('buy', buy)
 clubhouse_macoin_handler = CommandHandler('clubhouse', clubhouse)
+paper_macoin_handler = CommandHandler('paper', paper)
+parceiros_macoin_handler = CommandHandler('parceiros', parceiros)
+doe_macoin_handler = CommandHandler('doe', doe)
+hemp_macoin_handler = CommandHandler('hemp', hemp)
 
 # add handlers to dispatcher
 dispatcher.add_handler(start_handler)
@@ -79,6 +87,10 @@ dispatcher.add_handler(twitter_macoin_handler)
 dispatcher.add_handler(about_macoin_handler)
 dispatcher.add_handler(buy_macoin_handler)
 dispatcher.add_handler(clubhouse_macoin_handler)
+dispatcher.add_handler(paper_macoin_handler)
+dispatcher.add_handler(parceiros_macoin_handler)
+dispatcher.add_handler(doe_macoin_handler)
+dispatcher.add_handler(hemp_macoin_handler)
 
 # start bot
 updater.start_polling()
