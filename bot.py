@@ -25,6 +25,7 @@ from commands.paper import paper
 from commands.parceiros import parceiros
 from commands.doe import doe
 from commands.hemp import hemp
+from commands.medicos import medicos
 
 # get bot api token from .env
 load_dotenv('.env')
@@ -67,6 +68,7 @@ paper_macoin_handler = CommandHandler('paper', paper)
 parceiros_macoin_handler = CommandHandler('parceiros', parceiros)
 doe_macoin_handler = CommandHandler('doe', doe)
 hemp_macoin_handler = CommandHandler('hemp', hemp)
+medicos_macoin_handler = CommandHandler('medicos', medicos)
 
 # add handlers to dispatcher
 dispatcher.add_handler(start_handler)
@@ -91,6 +93,7 @@ dispatcher.add_handler(paper_macoin_handler)
 dispatcher.add_handler(parceiros_macoin_handler)
 dispatcher.add_handler(doe_macoin_handler)
 dispatcher.add_handler(hemp_macoin_handler)
+dispatcher.add_handler(medicos_macoin_handler)
 
 # start bot
 updater.start_polling()
